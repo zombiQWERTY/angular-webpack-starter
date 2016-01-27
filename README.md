@@ -28,7 +28,7 @@ $ npm install
 
 ## Scripts
 
-All scripts are run with `npm run [script]`, for example: `npm run test`. May be `sudo` required.
+All scripts are run with `npm run [script]`, for example: `npm run test`. Maybe `sudo` required.
 
 * `build` - generate a minified build to dist folder
 * `dev` - start development server, try it by opening `http://localhost:8080/`
