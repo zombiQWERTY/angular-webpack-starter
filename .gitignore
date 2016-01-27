@@ -1,0 +1,12 @@
+node_modules
+public
+
+node_modules
+.tmp
+.sass-cache
+.idea
+bower_components
+.DS_Store
+stats.json
+npm-debug.log
+*~

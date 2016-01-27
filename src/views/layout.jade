@@ -1,0 +1,8 @@
+.wrapper(ng-controller='LayoutController', pointer-events='')
+  header.header
+  main.main
+    .page-view
+      include ./layout/header.jade
+      div(ng-view='') //- Here will be content
+      include ./layout/footer.jade
+  footer.footer

@@ -1,0 +1,46 @@
+@define-mixin clearfix {
+  &::before, &::after {
+    content: " ";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+@define-mixin box-model $width, $height: null {
+  width: $width;
+
+  @if $height == null {
+    height: $width;
+  } @else {
+    height: $height;
+  };
+}
+
+@define-mixin no-margin $way, $type {
+  &:$(way)-child {
+    margin-$(type): 0;
+  }
+}
+
+@define-mixin centering $type {
+  position: absolute;
+
+  @if $type == center {
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+  };
+
+  @if $type == horizontal {
+    transform: translate(-50%, 0);
+    left: 50%;
+  };
+
+  @if $type == vertical {
+    transform: translate(0, -50%);
+    top: 50%;
+  };
+}
