@@ -2,8 +2,8 @@
  * Modules
  * ========================================================================== */
 
-import $           from 'jquery'
-import Application from '../../Application'
+import $           from 'jquery';
+import Application from '../../Application';
 
 /* ========================================================================== */
 
@@ -11,15 +11,15 @@ import Application from '../../Application'
 Application.directive('pointerEvents', () => {
   return {
     restrict: 'A',
-    link(scope, element, attrs) {
+    link(scope, element) {
       let   timer    = 0;
       const $window  = $(window);
       const $element = $(element);
 
-      $window.on("scroll", () => {
+      $window.on('scroll', () => {
         clearTimeout(timer);
-        if (!$element.hasClass("no-hover")) $element.addClass("no-hover");
-        timer = setTimeout(() => $element.removeClass("no-hover"), 500);
+        if (!$element.hasClass('no-hover')) { $element.addClass('no-hover'); }
+        timer = setTimeout(() => $element.removeClass('no-hover'), 500);
       });
     }
   };

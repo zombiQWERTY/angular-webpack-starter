@@ -2,17 +2,17 @@
  * Modules
  * ========================================================================== */
 
-import angular  from 'angular'
+import angular  from 'angular';
 
-import 'angular-route'
+import 'angular-route';
 
 /* ========================================================================== */
 
 
-const name = 'Workflow';
-let   deps = ['ngRoute'];
+const appname = 'Workflow';
+let   deps    = ['ngRoute'];
 
-const Application = angular.module(name, deps);
-Application.init  = () => angular.bootstrap(document, [name]);
+const Application = angular.module(appname, deps);
+Application.init  = () => angular.bootstrap(document, [appname]);
 
-export default Application
+export default Application;

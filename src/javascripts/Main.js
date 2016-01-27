@@ -2,7 +2,7 @@
  * Common
  * ========================================================================== */
 
-import './common/Routes'
+import './common/Routes';
 
 /* ========================================================================== */
 
@@ -10,9 +10,9 @@ import './common/Routes'
  * Modules
  * ========================================================================== */
 
-import Application from './Application'
+import Application from './Application';
 
-import './modules/Layout/LayoutCtrl'
+import './modules/Layout/LayoutCtrl';
 
 /* ========================================================================== */
 
@@ -20,7 +20,7 @@ import './modules/Layout/LayoutCtrl'
  * Layout
  * ========================================================================== */
 
-import layout      from "../views/layout.jade"
+import layout      from '../views/layout.jade';
 
 /* ========================================================================== */
 

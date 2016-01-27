@@ -2,9 +2,8 @@
  * Modules
  * ========================================================================== */
 
-import $           from 'jquery'
-import FastClick   from 'Fastclick'
-import Application from '../../Application'
+import FastClick   from 'Fastclick';
+import Application from '../../Application';
 
  /* ========================================================================== */
 
@@ -12,7 +11,7 @@ import Application from '../../Application'
  * Directives
  * ========================================================================== */
 
-import './PointerEventsDirective'
+import './PointerEventsDirective';
 
  /* ========================================================================== */
 
@@ -24,34 +23,34 @@ import './PointerEventsDirective'
  * Helpers
  * ===================================== */
 
-import '../../../stylesheets/helpers/mixins.scss'
-import '../../../stylesheets/helpers/variables.scss'
+import '../../../stylesheets/helpers/mixins.scss';
+import '../../../stylesheets/helpers/variables.scss';
 
 /*
  * Base
  * ===================================== */
 
-import './stylesheets/base/reset.scss'
-import './stylesheets/base/fonts.scss'
-import './stylesheets/base/globals.scss'
+import './stylesheets/base/reset.scss';
+import './stylesheets/base/fonts.scss';
+import './stylesheets/base/globals.scss';
 
 /*
  * Layout
  * ===================================== */
 
-import './stylesheets/layout/global.scss'
+import './stylesheets/layout/global.scss';
 
 /*
  * Header
  * ===================================== */
 
-import './stylesheets/header/header.scss'
+import './stylesheets/header/header.scss';
 
 /*
  * Footer
  * ===================================== */
 
-import './stylesheets/footer/footer.scss'
+import './stylesheets/footer/footer.scss';
 
  /* ========================================================================== */
 
@@ -66,7 +65,7 @@ Application.controller('LayoutController', [
         $scope.getRoute = this.getRoute();
       }
 
-      getRoute() {
+      static getRoute() {
         return $location.url();
       }
     }

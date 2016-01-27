@@ -2,9 +2,9 @@
  * Modules
  * ========================================================================== */
 
-import Application from '../Application'
+import Application from '../Application';
 
-import '../modules/Home/HomeCtrl'
+import '../modules/Home/HomeCtrl';
 
 /* ========================================================================== */
 
@@ -14,7 +14,7 @@ Application.config([
   '$locationProvider',
   ($routeProvider, $locationProvider) => {
 
-    if (!!(window.history && history.pushState)) $locationProvider.html5Mode(true);
+    if (!!(window.history && history.pushState)) { $locationProvider.html5Mode(true); }
 
     $routeProvider
       .when('/', {
