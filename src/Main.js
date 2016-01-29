@@ -20,7 +20,7 @@ import './modules/Layout/LayoutCtrl';
  * Layout
  * ========================================================================== */
 
-import layout      from '../views/layout.jade';
+import layout      from './modules/Layout/views/layout.jade';
 
 /* ========================================================================== */
 

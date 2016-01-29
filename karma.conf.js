@@ -20,14 +20,14 @@ module.exports = function karmaConfig (config) {
 
     files: [
       // Grab all files in the app folder that contain .test.
-      'src/javascripts/common/tests.webpack.js'
+      'src/common/tests.webpack.js'
     ],
 
     preprocessors: {
       // Reference: http://webpack.github.io/docs/testing.html
       // Reference: https://github.com/webpack/karma-webpack
       // Convert files with webpack and load sourcemaps
-      'src/javascripts/common/tests.webpack.js': ['webpack', 'sourcemap']
+      'src/common/tests.webpack.js': ['webpack', 'sourcemap']
     },
 
     browsers: [

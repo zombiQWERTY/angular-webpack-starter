@@ -18,7 +18,7 @@ Application.config([
 
     $routeProvider
       .when('/', {
-        template:   require('../../templates/home.jade')(),
+        template:   require('../modules/Home/views/home.jade')(),
         controller: 'HomeController'
       })
       .otherwise({

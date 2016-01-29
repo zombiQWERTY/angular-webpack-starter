@@ -1,24 +1,25 @@
 {
-  "name": "angular-webpack-babel-postcss-jade-livereload-workflow",
-  "version": "1.0.0",
+  "name": "angular-webpack-workflow",
+  "version": "2.0.0",
   "description": "A workflow for Angular made with Webpack",
   "scripts": {
-    "build": "webpack --config webpack.build.js --bail -p",
-    "dev": "webpack-dev-server --content-base './src/content/' --history-api-fallback --inline --progress",
-    "test": "karma start",
-    "test:live": "karma start --auto-watch --no-single-run",
-    "stats": "webpack --json --profile > stats.json"
+    "build": "sudo webpack --config webpack.build.js --bail -p",
+    "dev": "sudo webpack-dev-server --content-base './src/content/' --history-api-fallback --inline --progress",
+    "test": "sudo karma start",
+    "test:live": "sudo karma start --auto-watch --no-single-run",
+    "stats": "sudo webpack --json --profile > stats.json",
+    "install": "sudo npm install"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zombiQWERTY/angular-webpack-babel-postcss-jade-livereload-workflow.git"
+    "url": "https://github.com/Foxandxss/angular-webpack-workflow.git"
   },
-  "author": "zombiQWERTY",
+  "author": "Jesus Rodriguez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zombiQWERTY/angular-webpack-babel-postcss-jade-livereload-workflow/issues"
+    "url": "https://github.com/Foxandxss/angular-webpack-workflow/issues"
   },
-  "homepage": "https://github.com/zombiQWERTY/angular-webpack-babel-postcss-jade-livereload-workflow",
+  "homepage": "https://github.com/Foxandxss/angular-webpack-workflow",
   "dependencies": {
     "angular": "^1.4.8",
     "angular-route": "latest",
@@ -35,7 +36,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.4",
     "html-loader": "^0.4.0",
-    "html-webpack-plugin": "^2.6.1",
+    "html-webpack-plugin": "^2.7.1",
     "imports-loader": "^0.6.5",
     "isparta-instrumenter-loader": "^1.0.0",
     "jade": "^1.11.0",
@@ -48,9 +49,9 @@
     "karma-sourcemap-loader": "^0.3.6",
     "karma-spec-reporter": "0.0.23",
     "karma-webpack": "^1.7.0",
-    "node-libs-browser": "^1.0.0",
+    "node-libs-browser": "^0.5.3",
     "null-loader": "^0.1.1",
-    "phantomjs": "^2.1.2",
+    "phantomjs": "^1.9.8",
     "postcss-hexrgba": "^0.2.0",
     "postcss-import": "^7.1.3",
     "postcss-inline-comment": "^2.0.0",

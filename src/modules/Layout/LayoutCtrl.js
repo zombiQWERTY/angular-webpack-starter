@@ -5,7 +5,7 @@
 import FastClick   from 'Fastclick';
 import Application from '../../Application';
 
- /* ========================================================================== */
+/* ========================================================================== */
 
 /*
  * Directives
@@ -13,7 +13,7 @@ import Application from '../../Application';
 
 import './PointerEventsDirective';
 
- /* ========================================================================== */
+/* ========================================================================== */
 
 /*
  * Styles
@@ -23,8 +23,8 @@ import './PointerEventsDirective';
  * Helpers
  * ===================================== */
 
-import '../../../stylesheets/helpers/mixins.scss';
-import '../../../stylesheets/helpers/variables.scss';
+import '../../Common/stylesheets/helpers/mixins.scss';
+import '../../Common/stylesheets/helpers/variables.scss';
 
 /*
  * Base
@@ -52,7 +52,7 @@ import './stylesheets/header/header.scss';
 
 import './stylesheets/footer/footer.scss';
 
- /* ========================================================================== */
+/* ========================================================================== */
 
 
 Application.controller('LayoutController', [
@@ -62,10 +62,10 @@ Application.controller('LayoutController', [
     class Layout {
       constructor() {
         new FastClick(document.body);
-        $scope.getRoute = this.getRoute();
+        $scope.getRoute = Layout.route;
       }
 
-      static getRoute() {
+      static get route() {
         return $location.url();
       }
     }

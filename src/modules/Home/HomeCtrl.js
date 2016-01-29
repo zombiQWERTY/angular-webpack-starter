@@ -7,6 +7,14 @@ import Application from '../../Application';
 /* ========================================================================== */
 
 /*
+ * Directives
+ * ========================================================================== */
+
+//import './MyDirective';
+
+/* ========================================================================== */
+
+/*
  * Styles
  * ========================================================================== */
 
@@ -14,20 +22,20 @@ import Application from '../../Application';
  * Helpers
  * ===================================== */
 
-import '../../../stylesheets/helpers/mixins.scss';
-import '../../../stylesheets/helpers/variables.scss';
+import '../../Common/stylesheets/helpers/mixins.scss';
+import '../../Common/stylesheets/helpers/variables.scss';
 
 /*
  * Vendor
  * ===================================== */
 
-//import './stylesheets/vendor/vendorStyle.scss';
+//import './stylesheets/vendor/my_vendor.scss';
 
 /*
  * UI
  * ===================================== */
 
-import '../../../stylesheets/ui/buttons.scss';
+import '../../Common/stylesheets/ui/buttons.scss';
 
 /*
  * Home

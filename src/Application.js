@@ -9,7 +9,7 @@ import 'angular-route';
 /* ========================================================================== */
 
 
-const appname = 'Workflow';
+const appname = 'CFM';
 let   deps    = ['ngRoute'];
 
 const Application = angular.module(appname, deps);
