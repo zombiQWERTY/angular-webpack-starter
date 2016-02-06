@@ -35,6 +35,6 @@ import './footer/footer.scss';
 /* ========================================================================== */
 
 
-export default angular.module('Layout', [
+export default angular.module('Workflow.Layout', [
   PointerEvents
 ]).controller('LayoutController', LayoutController).name;

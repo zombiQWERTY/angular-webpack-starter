@@ -1,6 +1,6 @@
 export default class HomeController {
   constructor($scope) {
-    this.$scope    = $scope;
+    this.$scope = $scope;
   }
 }
 

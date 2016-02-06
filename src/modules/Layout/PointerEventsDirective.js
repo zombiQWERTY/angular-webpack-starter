@@ -1,19 +1,23 @@
 import angular from 'angular';
 
 const PointerEvents = [
-  () => {
+  '$timeout',
+  $timeout => {
     return {
       restrict: 'A',
       link(scope, $element) {
-        let   timer;
+        let timeout;
         window.addEventListener('scroll', () => {
-          clearTimeout(timer);
-          if(!$element[0].classList.contains('no-hover')) { $element[0].classList.add('no-hover'); }
-          timer = setTimeout(() => $element[0].classList.remove('no-hover'), 500);
+          $timeout.cancel(timeout);
+          if(!$element[0].classList.contains('no-hover')) {
+            $element[0].classList.add('no-hover');
+          } else {
+            timeout = $timeout(() => $element[0].classList.remove('no-hover'), 500);
+          }
         });
       }
     };
   }
 ];
 
-export default angular.module('Layout.PointerEvents', []).directive('pointerEvents', PointerEvents).name;
+export default angular.module('Workflow.Layout.PointerEvents', []).directive('pointerEvents', PointerEvents).name;

@@ -1,4 +1,4 @@
-const Routing = ($routeProvider, $locationProvider) => {
+const Config = ($routeProvider, $locationProvider) => {
   if (!!(window.history && history.pushState)) {
     $locationProvider.html5Mode(true);
   }
@@ -13,6 +13,6 @@ const Routing = ($routeProvider, $locationProvider) => {
     });
 };
 
-Routing.$inject = ['$routeProvider', '$locationProvider'];
+Config.$inject = ['$routeProvider', '$locationProvider'];
 
-export default Routing;
+export default Config;
