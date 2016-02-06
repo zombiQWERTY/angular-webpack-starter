@@ -1,26 +1,19 @@
-/*
- * Modules
- * ========================================================================== */
+import angular from 'angular';
 
-import $           from 'jquery';
-import Application from '../../Application';
+const PointerEvents = [
+  () => {
+    return {
+      restrict: 'A',
+      link(scope, $element) {
+        let   timer;
+        window.addEventListener('scroll', () => {
+          clearTimeout(timer);
+          if(!$element[0].classList.contains('no-hover')) { $element[0].classList.add('no-hover'); }
+          timer = setTimeout(() => $element[0].classList.remove('no-hover'), 500);
+        });
+      }
+    };
+  }
+];
 
-/* ========================================================================== */
-
-
-Application.directive('pointerEvents', () => {
-  return {
-    restrict: 'A',
-    link(scope, element) {
-      let   timer    = 0;
-      const $window  = $(window);
-      const $element = $(element);
-
-      $window.on('scroll', () => {
-        clearTimeout(timer);
-        if (!$element.hasClass('no-hover')) { $element.addClass('no-hover'); }
-        timer = setTimeout(() => $element.removeClass('no-hover'), 500);
-      });
-    }
-  };
-});
+export default angular.module('Layout.PointerEvents', []).directive('pointerEvents', PointerEvents).name;

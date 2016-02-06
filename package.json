@@ -1,14 +1,17 @@
 {
   "name": "angular-webpack-workflow",
-  "version": "2.0.0",
+  "version": "4.0.0",
   "description": "A workflow for Angular made with Webpack",
   "scripts": {
-    "build": "sudo webpack --config webpack.build.js --bail -p",
+    "build": "webpack --config webpack.build.js --bail -p",
     "dev": "sudo webpack-dev-server --content-base './src/content/' --history-api-fallback --inline --progress",
     "test": "sudo karma start",
     "test:live": "sudo karma start --auto-watch --no-single-run",
     "stats": "sudo webpack --json --profile > stats.json",
-    "install": "sudo npm install"
+    "clean": "rimraf ./public",
+    "e2e": "node ./node_modules/.bin/protractor",
+    "e2e:live": "protractor --elementExplorer",
+    "ci": "npm run e2e && npm run test"
   },
   "repository": {
     "type": "git",
@@ -38,6 +41,7 @@
     "html-loader": "^0.4.0",
     "html-webpack-plugin": "^2.7.1",
     "imports-loader": "^0.6.5",
+    "install": "^0.4.2",
     "isparta-instrumenter-loader": "^1.0.0",
     "jade": "^1.11.0",
     "jade-loader": "^0.8.0",
@@ -57,7 +61,9 @@
     "postcss-inline-comment": "^2.0.0",
     "postcss-loader": "^0.8.0",
     "precss": "^1.4.0",
+    "protractor": "^3.0.0",
     "raw-loader": "^0.5.1",
+    "selenium-standalone": "^4.9.0",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.2",

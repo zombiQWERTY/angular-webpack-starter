@@ -1,74 +1,21 @@
-/*
- * Modules
- * ========================================================================== */
+import FastClick from 'Fastclick';
 
-import FastClick   from 'Fastclick';
-import Application from '../../Application';
+export default class LayoutController {
+  constructor($scope, $location) {
+    this.$scope    = $scope;
+    this.$location = $location;
 
-/* ========================================================================== */
-
-/*
- * Directives
- * ========================================================================== */
-
-import './PointerEventsDirective';
-
-/* ========================================================================== */
-
-/*
- * Styles
- * ========================================================================== */
-
-/*
- * Helpers
- * ===================================== */
-
-import '../../Common/stylesheets/helpers/mixins.scss';
-import '../../Common/stylesheets/helpers/variables.scss';
-
-/*
- * Base
- * ===================================== */
-
-import './stylesheets/base/reset.scss';
-import './stylesheets/base/fonts.scss';
-import './stylesheets/base/globals.scss';
-
-/*
- * Layout
- * ===================================== */
-
-import './stylesheets/layout/global.scss';
-
-/*
- * Header
- * ===================================== */
-
-import './stylesheets/header/header.scss';
-
-/*
- * Footer
- * ===================================== */
-
-import './stylesheets/footer/footer.scss';
-
-/* ========================================================================== */
-
-
-Application.controller('LayoutController', [
-  '$scope',
-  '$location',
-  ($scope, $location) => {
-    class Layout {
-      constructor() {
-        new FastClick(document.body);
-        $scope.getRoute = Layout.route;
-      }
-
-      static get route() {
-        return $location.url();
-      }
-    }
-    new Layout();
+    this.$scope.getRoute = this.route;
+    LayoutController.bootstrap();
   }
-]);
+
+  static bootstrap() {
+    new FastClick(document.body);
+  }
+
+  get route() {
+    return this.$location.url();
+  }
+}
+
+LayoutController.$inject = ['$scope', '$location'];

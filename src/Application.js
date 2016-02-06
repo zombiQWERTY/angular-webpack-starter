@@ -1,18 +1,18 @@
-/*
- * Modules
- * ========================================================================== */
+import angular    from 'angular';
+import ngRoute    from 'angular-route';
 
-import angular  from 'angular';
+import Routing    from './Routing';
+import layoutView from './modules/Layout/views/layout.jade';
 
-import 'angular-route';
+import Layout     from './modules/Layout/Index';
+import Home       from './modules/Home/Index';
 
-/* ========================================================================== */
 
 
 const appname = 'CFM';
-let   deps    = ['ngRoute'];
+const deps    = [ngRoute];
+const modules = [Layout, Home];
 
-const Application = angular.module(appname, deps);
-Application.init  = () => angular.bootstrap(document, [appname]);
-
-export default Application;
+document.getElementById('app-container').innerHTML = layoutView();
+angular.module(appname, deps.concat(modules)).config(Routing);
+angular.bootstrap(document, [appname]);
