@@ -1,30 +1,30 @@
 {
   "name": "angular-webpack-workflow",
   "version": "4.0.0",
-  "description": "A workflow for Angular made with Webpack",
+  "description": "An Angular Webpack Starter kit featuring Angular 1.x (ngRoute, Tests, E2E, Dev/Prod), Karma, Protractor, Jasmine, Babel, Postcss, Jade, livereload and Webpack",
   "keywords": ["angular", "webpack", "babel", "postcss", "jade", "livereload", "karma", "protractor", "jasmine",
     "workflow", "e2e"],
   "scripts": {
-    "build": "webpack --config webpack.build.js --bail -p",
-    "dev": "sudo webpack-dev-server --content-base './src/content/' --history-api-fallback --inline --progress",
-    "test": "sudo karma start",
-    "test:live": "sudo karma start --auto-watch --no-single-run",
-    "stats": "sudo webpack --json --profile > stats.json",
-    "clean": "rimraf ./public",
+    "build": "npm run clean && webpack --config webpack.build.js --bail -p",
+    "dev": "webpack-dev-server --content-base './src/content/' --history-api-fallback --inline --progress",
+    "test": "karma start",
+    "test:live": "karma start --auto-watch --no-single-run",
     "e2e": "node ./node_modules/.bin/protractor",
-    "e2e:live": "protractor --elementExplorer",
-    "ci": "npm run e2e && npm run test"
+    "e2e:live": "./node_modules/.bin/protractor --elementExplorer",
+    "ci": "npm run e2e && npm run test",
+    "clean": "rimraf ./public && rimraf ./build",
+    "stats": "webpack --json --profile > stats.json"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zombiQWERTY/angular-webpack-babel-postcss-jade-livereload-workflow.git"
+    "url": "https://github.com/zombiQWERTY/angular-webpack-starter.git"
   },
-  "author": "Jesus Rodriguez",
+  "author": "zombiQWERTY <zombiqwerty@yandex.ru>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zombiQWERTY/angular-webpack-babel-postcss-jade-livereload-workflow/issues"
+    "url": "https://github.com/zombiQWERTY/angular-webpack-starter/issues"
   },
-  "homepage": "https://github.com/zombiQWERTY/angular-webpack-babel-postcss-jade-livereload-workflow",
+  "homepage": "https://github.com/zombiQWERTY/angular-webpack-starter",
   "dependencies": {
     "angular": "^1.5.0",
     "angular-route": "latest",

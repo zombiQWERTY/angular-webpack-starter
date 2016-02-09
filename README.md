@@ -1,4 +1,4 @@
-# angular + testing (protractor, karma, jasmine) + webpack + babel + postcss + jade + livereload workflow
+# An Angular Webpack Starter kit
 
 This workflow serves as a starting point for building Angular 1.x applications using WebPack. Should be noted that apart from the pre-installed angular package, this workflow is pretty much generic.
 
@@ -21,7 +21,7 @@ It is a direct port of the amazing [angular workflow](https://github.com/Foxandx
 To use it, just clone this repo and install the npm dependencies:
 
 ```shell
-$ git clone https://github.com/zombiQWERTY/angular-webpack-babel-postcss-jade-livereload-workflow my_app
+$ git clone https://github.com/zombiQWERTY/angular-webpack-starter my_app
 $ cd my_app
 $ npm install
 ```
@@ -32,10 +32,13 @@ All scripts are run with `npm run [script]`, for example: `npm run test`. Maybe 
 
 * `build` - generate a minified build to dist folder
 * `dev` - start development server, try it by opening `http://localhost:8080/`
-* `test` - run all tests
+* `test` - run all unit tests
 * `test:live` - continuously run unit tests watching for changes
+* `e2e` - run e2e tests
+* `e2e:live` - continuously run e2e tests watching for changes
+* `ci` - run all e2e and unit tests
 * `stats` - genetate stats.json file
-* `install` - install all dependencies from package.json
+* `clean` - clean public directory
 
 See what each script does by looking at the `scripts` section in [package.json](./package.json).
 
