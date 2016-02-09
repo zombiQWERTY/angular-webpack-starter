@@ -2,6 +2,8 @@
   "name": "angular-webpack-workflow",
   "version": "4.0.0",
   "description": "A workflow for Angular made with Webpack",
+  "keywords": ["angular", "webpack", "babel", "postcss", "jade", "livereload", "karma", "protractor", "jasmine",
+    "workflow", "e2e"],
   "scripts": {
     "build": "webpack --config webpack.build.js --bail -p",
     "dev": "sudo webpack-dev-server --content-base './src/content/' --history-api-fallback --inline --progress",
@@ -15,19 +17,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Foxandxss/angular-webpack-workflow.git"
+    "url": "https://github.com/zombiQWERTY/angular-webpack-babel-postcss-jade-livereload-workflow.git"
   },
   "author": "Jesus Rodriguez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Foxandxss/angular-webpack-workflow/issues"
+    "url": "https://github.com/zombiQWERTY/angular-webpack-babel-postcss-jade-livereload-workflow/issues"
   },
-  "homepage": "https://github.com/Foxandxss/angular-webpack-workflow",
+  "homepage": "https://github.com/zombiQWERTY/angular-webpack-babel-postcss-jade-livereload-workflow",
   "dependencies": {
-    "angular": "^1.4.8",
+    "angular": "^1.5.0",
     "angular-route": "latest",
-    "fastclick": "latest",
-    "jquery": "latest"
+    "fastclick": "latest"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.8",

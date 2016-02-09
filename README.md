@@ -1,4 +1,4 @@
-# angular-webpack-babel-postcss-jade-livereload-workflow
+# angular + testing (protractor, karma, jasmine) + webpack + babel + postcss + jade + livereload workflow
 
 This workflow serves as a starting point for building Angular 1.x applications using WebPack. Should be noted that apart from the pre-installed angular package, this workflow is pretty much generic.
 
