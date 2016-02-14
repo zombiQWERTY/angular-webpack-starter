@@ -2,7 +2,6 @@
 
 // Modules
 var webpack           = require('webpack');
-var autoprefixer      = require('autoprefixer');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -158,10 +157,13 @@ module.exports = function makeWebpackConfig (options) {
   config.postcss = function(bundler) {
     return [
       require('postcss-import')({ addDependencyTo: bundler }),
-      require('precss')(),
       require('postcss-inline-comment')(),
       require('postcss-hexrgba'),
-      autoprefixer({
+      require('postcss-size'),
+      require('precss')(),
+      require('css-mqpacker')(),
+      require('postcss-discard-comments/dist/index')(),
+      require('autoprefixer')({
         browsers: ['last 2 version']
       })
     ];
