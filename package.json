@@ -1,5 +1,5 @@
 {
-  "name": "angular-webpack-workflow",
+  "name": "angular-webpack-starter-kit",
   "version": "5.0.0",
   "description": "An Angular Webpack Starter kit featuring Angular 1.x (ngRoute, Tests, E2E, Dev/Prod), Karma, Protractor, Jasmine, Babel, Postcss, Jade, livereload and Webpack",
   "keywords": [
