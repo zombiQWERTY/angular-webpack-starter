@@ -1,54 +1,103 @@
 # An Angular Webpack Starter kit
 
-This workflow serves as a starting point for building Angular 1.x applications using WebPack. Should be noted that apart from the pre-installed angular package, this workflow is pretty much generic.
+[![Dependency Status](https://david-dm.org/zombiQWERTY/angular-webpack-starter/status.svg)](https://david-dm.org/zombiQWERTY/angular-webpack-starter#info=dependencies) [![devDependency Status](https://david-dm.org/zombiQWERTY/angular-webpack-starter/dev-status.svg)](https://david-dm.org/zombiQWERTY/angular-webpack-starter#info=devDependencies)
 
-It is a direct port of the amazing [angular workflow](https://github.com/Foxandxss/angular-webpack-workflow) of [Jesús Rodríguez](https://github.com/Foxandxss). All the credits goes for him.
+A complete, yet simple, starter for Angular using Webpack.
 
-## Features
+This workflow serves as a starting point for building Angular 1.x applications using Webpack. Should be noted that apart from the pre-installed angular package, this workflow is pretty much generic.
 
 * Heavily commented webpack configuration with reasonable defaults.
-* ES6, and ES7 support with babel.js.
+* ES6, and ES7 support with babel.
 * Source maps included in all builds.
 * Development server with live reload.
-* Production builds with cache busting and asset minification.
+* Production builds with cache busting.
 * PostCSS and jade support by default.
-* Testing environment using karma to run tests and jasmine as the framework.
+* Testing environment using karma to run tests and jasmine as the framework; protractor to End to End tests.
 * Code coverage when tests are run.
-* No gulp and no grunt, just npm run-scripts.
+* No gulp and no grunt, just npm scripts.
 
-## Installation
+>Warning: Make sure you're using the latest version of Node.js and NPM
 
-To use it, just clone this repo and install the npm dependencies:
+### Quick start
 
-```shell
-$ git clone https://github.com/zombiQWERTY/angular-webpack-starter my_app
-$ cd my_app
+> Clone/Download the repo then edit `Application.js` inside [`/src/Application.js`](/src/Application.js)
+
+```bash
+# clone our repo
+$ git clone https://github.com/zombiQWERTY/angular-webpack-starter.git my-app
+
+# change directory to your app
+$ cd my-app
+
+# install the dependencies with npm
 $ npm install
+
+# start the server
+$ npm start
 ```
 
-## Scripts
+go to [http://localhost:8080](http://localhost:8080) in your browser.
 
-All scripts are run with `npm run [script]`, for example: `npm run test`. Maybe `sudo` required.
+# Table of Contents
 
-* `build` - generate a minified build to dist folder
-* `dev` - start development server, try it by opening `http://localhost:8080/`
-* `test` - run all unit tests
-* `test:live` - continuously run unit tests watching for changes
-* `e2e` - run e2e tests
-* `e2e:live` - continuously run e2e tests watching for changes
-* `ci` - run all e2e and unit tests
-* `stats` - genetate stats.json file
-* `clean` - clean public directory
+* [Getting Started](#getting-started)
+    * [Dependencies](#dependencies)
+    * [Installing](#installing)
+    * [Running the app](#running-the-app)
+    * [Developing](#developing)
+    * [Testing](#testing)
+* [License](#license)
 
-See what each script does by looking at the `scripts` section in [package.json](./package.json).
+# Getting Started
 
-## Base app and tutorial
+## Dependencies
 
-This repo is finally finished boilerplate for your app.
+What you need to run this app:
+* `node` and `npm` (Use [NVM](https://github.com/creationix/nvm))
+* Ensure you're running Node (`v4.1.x`+) and NPM (`2.14.x`+)
 
-[Content folder](./src/content/) is for your public images (images, that loads from html/jade). The path for `src` 
-attribute will be without parent folder name (`content`).
+## Installing
 
-## License
+* `fork` this repo
+* `clone` your fork
+* `npm install` to install all dependencies
+* For End to End live tests:
+* `npm install selenium-standalone@latest -g`
+* `selenium-standalone install`
 
-The license of this workflow is MIT.
+## Running the app
+
+After you have installed all dependencies you can now run the app with:
+```bash
+npm start
+```
+
+It will start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The port will be displayed to you as `http://localhost:8080`.
+
+## Developing
+
+### Build files
+
+* single run: `npm run build`
+
+## Testing
+
+#### 1. Unit Tests
+
+* single run: `npm test`
+* live mode (TDD style): `npm run test-watch`
+
+
+#### 2. End to End Tests
+
+* single run: `npm e2e`
+* live mode (TDD style): `npm run e2e-watch`
+
+## Other
+
+* `npm stats` for code analysing ([webpack.github.io/analyse](https://webpack.github.io/analyse/))
+* Store your content (images, etc.) that loads from html/jade in [Content folder](./src/content/) folder
+
+# License
+
+[MIT](/LICENSE)

@@ -1,8 +1,9 @@
 node_modules
+dist
+coverage
 public
 build
 
-node_modules
 .tmp
 .sass-cache
 .idea
