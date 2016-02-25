@@ -62,10 +62,13 @@ What you need to run this app:
 Either
 * `fork` this repo
 * `clone` your fork
+
 Or just
 * `npm install angular-webpack-starter-kit` for completely installation
+
 And then
 * `npm install` to install all dependencies
+
 For End to End live testing:
 * `npm install selenium-standalone@latest -g`
 * `selenium-standalone install`
