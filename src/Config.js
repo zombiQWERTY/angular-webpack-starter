@@ -1,18 +1,14 @@
-const Config = ($routeProvider, $locationProvider) => {
-  if (!!(window.history && history.pushState)) {
-    $locationProvider.html5Mode(true);
-  }
+const Config = ($stateProvider, $urlRouterProvider, $locationProvider) => { /*@ngInject*/
+  $locationProvider.html5Mode(true);
 
-  $routeProvider
-    .when('/', {
+  $urlRouterProvider.otherwise('/');
+
+  $stateProvider
+    .state('home', {
+      url:        '/',
       template:   require('./modules/Home/views/home.jade')(),
       controller: 'HomeController'
-    })
-    .otherwise({
-      redirectTo: '/'
     });
 };
-
-Config.$inject = ['$routeProvider', '$locationProvider'];
 
 export default Config;

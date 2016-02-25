@@ -1,6 +1,6 @@
 import FastClick from 'Fastclick';
 
-export default class LayoutController {
+export default class LayoutController {  /*@ngInject*/
   constructor($scope, $location) {
     this.$scope    = $scope;
     this.$location = $location;
@@ -17,5 +17,3 @@ export default class LayoutController {
     return this.$location.url();
   }
 }
-
-LayoutController.$inject = ['$scope', '$location'];

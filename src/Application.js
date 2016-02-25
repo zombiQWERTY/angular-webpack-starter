@@ -1,5 +1,5 @@
 import angular    from 'angular';
-import ngRoute    from 'angular-route';
+import uiRouter   from 'angular-ui-router';
 
 import Config     from './Config';
 import layoutView from './modules/Layout/views/layout.jade';
@@ -10,7 +10,7 @@ import Home       from './modules/Home/Index';
 
 
 const appname = 'Workflow';
-const deps    = [ngRoute];
+const deps    = [uiRouter];
 const modules = [Layout, Home];
 
 document.getElementById('app-container').innerHTML = layoutView();

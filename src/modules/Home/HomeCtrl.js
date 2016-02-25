@@ -1,7 +1,5 @@
-export default class HomeController {
+export default class HomeController {  /*@ngInject*/
   constructor($scope) {
     this.$scope = $scope;
   }
 }
-
-HomeController.$inject = ['$scope'];
