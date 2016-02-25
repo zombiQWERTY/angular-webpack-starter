@@ -46,6 +46,7 @@ go to [http://localhost:8080](http://localhost:8080) in your browser.
     * [Running the app](#running-the-app)
     * [Developing](#developing)
     * [Testing](#testing)
+    * [Other](#other)
 * [License](#license)
 
 # Getting Started
