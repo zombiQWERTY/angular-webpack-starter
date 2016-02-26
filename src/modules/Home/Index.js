@@ -14,4 +14,4 @@ import './stylesheets/home.scss';
 /* ========================================================================== */
 
 
-export default angular.module('Home', []).controller('HomeController', HomeController).name;
+export default angular.module('Workflow.Home', []).controller('HomeController', HomeController).name;

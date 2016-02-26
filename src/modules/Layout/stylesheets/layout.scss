@@ -10,8 +10,12 @@ a {
   }
 }
 
-html, body, main {
+html, body {
   height: 100%;
+}
+
+.app-container, .wrapper {
+  min-height: 100%;
 }
 
 body {
@@ -30,8 +34,4 @@ body {
   min-width: $min-content-width;
   height: 100%;
   margin: 0 auto;
-}
-
-.page-view {
-
 }
