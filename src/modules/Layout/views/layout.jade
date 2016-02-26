@@ -1,7 +1,7 @@
-.wrapper(ng-controller="LayoutController", pointer-events="")
+section.wrapper(ng-controller="LayoutController", pointer-events="")
   main.main
     .page-view
-      include ../header/header.jade
+      include ../subModules/Header/header.jade
       div(ui-view="")
         //- Here will be content
-      include ../footer/footer.jade
+      include ../subModules/Footer/footer.jade

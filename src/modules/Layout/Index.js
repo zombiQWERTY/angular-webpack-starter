@@ -3,8 +3,8 @@
  * ========================================================================== */
 
 import angular          from 'angular';
-import LayoutController from './LayoutCtrl';
-import PointerEvents    from './PointerEventsDirective';
+import LayoutController from './controller/LayoutCtrl';
+import PointerEvents    from './directives/PointerEvents/PointerEventsDirective';
 
 /*
  * Stylesheets
@@ -25,12 +25,12 @@ import './stylesheets/layout.scss';
 /* Header
  * ===================================== */
 
-import './header/header.scss';
+import './subModules/Header/header.scss';
 
 /* Footer
  * ===================================== */
 
-import './footer/footer.scss';
+import './subModules/Footer/footer.scss';
 
 /* ========================================================================== */
 

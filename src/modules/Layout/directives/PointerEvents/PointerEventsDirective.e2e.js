@@ -1,10 +1,7 @@
-describe('Application', () => {
-  'use strict';
-
+describe('PointerEvents', () => {
   beforeEach(() => {
     browser.get('/');
   });
-
 
 });
 

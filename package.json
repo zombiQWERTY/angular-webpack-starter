@@ -1,6 +1,6 @@
 {
   "name": "angular-webpack-starter-kit",
-  "version": "5.0.2",
+  "version": "5.0.4",
   "description": "An Angular Webpack Starter kit featuring Angular 1.x (ngRoute, Tests, E2E, Dev/Prod), Karma, Protractor, Jasmine, Babel, Postcss, Jade, livereload and Webpack",
   "keywords": [
     "angular",
@@ -15,7 +15,8 @@
     "workflow",
     "e2e",
     "starter",
-    "kit"
+    "kit",
+    "starter kit"
   ],
   "scripts": {
     "build": "rimraf dist && webpack --bail --progress --profile",

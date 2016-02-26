@@ -3,7 +3,7 @@
  * ========================================================================== */
 
 import angular          from 'angular';
-import HomeController   from './HomeCtrl';
+import HomeController   from './controller/HomeCtrl';
 
 /*
  * Stylesheets
