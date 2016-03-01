@@ -2,9 +2,11 @@
  * Javascripts
  * ========================================================================== */
 
-import angular          from 'angular';
-import LayoutController from './controller/LayoutCtrl';
-import PointerEvents    from './directives/PointerEvents/PointerEventsDirective';
+import angular       from 'angular';
+import AppController from './controller/AppCtrl';
+
+import PointerEvents from './directives/PointerEvents/PointerEventsDirective';
+import ThirdParties  from './directives/ThirdParties/ThirdPartiesDirective';
 
 /*
  * Stylesheets
@@ -22,19 +24,14 @@ import './stylesheets/globals.scss';
 
 import './stylesheets/layout.scss';
 
-/* Header
- * ===================================== */
-
-import './subModules/Header/header.scss';
-
-/* Footer
- * ===================================== */
-
-import './subModules/Footer/footer.scss';
-
 /* ========================================================================== */
 
-
-export default angular.module('Workflow.Layout', [
-  PointerEvents
-]).controller('LayoutController', LayoutController).name;
+/**
+ * Define app module.
+ * @param {String} moduleName.
+ * @param {Array} dependencies.
+ * @export Module name - name of root module of Simply app
+ */
+export default angular.module('Workflow.App', [
+  PointerEvents, ThirdParties
+]).controller('AppController', AppController).name;

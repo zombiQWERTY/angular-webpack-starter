@@ -1,0 +1,31 @@
+/*
+@each $type in Light, LightItalic, Medium, MediumItalic {
+  @font-face {
+    font-family: "My Font";
+    src: url("./fonts/MyFont/$(type)/MyFont-$(type).eot");
+    src: url("./fonts/MyFont/$(type)/MyFont-$(type).eot?#iefix") format("embedded-opentype"),
+    url("./fonts/MyFont/$(type)/MyFont-$(type).woff") format("woff"),
+    url("./fonts/MyFont/$(type)/MyFont-$(type).ttf") format("truetype");
+
+    @if $type == Light {
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    @if $type == LightItalic {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    @if $type == Medium {
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    @if $type == MediumItalic {
+      font-style: italic;
+      font-weight: 700;
+    }
+  }
+}
+*/

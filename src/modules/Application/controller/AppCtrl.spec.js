@@ -1,15 +1,15 @@
-import Home from '../Index';
+import App from '../Index';
 
-describe('Controller: Home', () => {
+describe('Controller: App', () => {
   let $scope, $controller, controller;
 
-  beforeEach(angular.mock.module(Home));
+  beforeEach(angular.mock.module(App));
 
   beforeEach(angular.mock.inject((_$controller_, _$rootScope_) => {
     $controller = _$controller_;
     $scope      = _$rootScope_.$new();
 
-    controller  = $controller('HomeController', { $scope });
+    controller  = $controller('AppController', { $scope });
     $scope.$digest();
   }));
 

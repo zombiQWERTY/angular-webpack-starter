@@ -1,9 +1,8 @@
 exports.config = {
   baseUrl: 'http://localhost:8080/',
 
-  // use `npm run e2e`
+  /** use `npm run e2e` */
   specs: [
-    './src/**/**.e2e.js',
     './src/**/*.e2e.js'
   ],
   exclude: [],

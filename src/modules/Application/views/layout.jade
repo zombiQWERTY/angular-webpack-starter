@@ -1,4 +1,8 @@
-section.wrapper(ng-controller="LayoutController", pointer-events="")
+section.wrapper(
+  ng-controller="AppController"
+  pointer-events=""
+  third-parties="")
+
   include ../subModules/Header/header.jade
   main.main(ui-view="")
   include ../subModules/Footer/footer.jade
