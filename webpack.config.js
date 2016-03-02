@@ -9,6 +9,8 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
  * Get npm lifecycle event to identify the environment
  */
 var ENV = process.env.npm_lifecycle_event;
+var isTest = ENV === 'test' || ENV === 'test-watch';
+var isProd = ENV === 'build';
 
 module.exports = (function makeWebpackConfig () {
   /**
@@ -30,7 +32,7 @@ module.exports = (function makeWebpackConfig () {
    * Should be an empty object if it's generating a test build
    * Karma will set this when it's a test build
    */
-  config.entry = ENV === 'test' ? {} : {
+  config.entry = isTest ? {} : {
     app: './src/Application.js'
   };
 
@@ -40,26 +42,26 @@ module.exports = (function makeWebpackConfig () {
    * Should be an empty object if it's generating a test build
    * Karma will handle setting it up for you when it's a test build
    */
-  config.output = ENV === 'test' ? {} : {
+  config.output = isTest ? {} : {
     path: __dirname + '/dist',  /** Absolute output directory */
 
     /**
      * Output path from the view of the page
      * Uses webpack-dev-server in development
      */
-    publicPath: ENV === 'build' ? '/' : 'http://localhost:' + port + '/',
+    publicPath: isProd ? '/' : 'http://localhost:' + port + '/',
 
     /**
      * Filename for entry points
      * Only adds hash in build mode
      */
-    filename: ENV === 'build' ? '[name].[hash].js' : '[name].bundle.js',
+    filename: isProd ? '[name].[hash].js' : '[name].bundle.js',
 
     /**
      * Filename for non-entry points
      * Only adds hash in build mode
      */
-    chunkFilename: ENV === 'build' ? '[name].[hash].js' : '[name].bundle.js'
+    chunkFilename: isProd ? '[name].[hash].js' : '[name].bundle.js'
   };
 
   /**
@@ -67,11 +69,15 @@ module.exports = (function makeWebpackConfig () {
    * Reference: http://webpack.github.io/docs/configuration.html#devtool
    * Type of sourcemap to use per build type
    */
-  if (ENV === 'test') {
+  if (isTest) {
     config.devtool = 'inline-source-map';
-  } else if (ENV === 'build') {
+  }
+
+  if (isProd) {
     config.devtool = 'source-map';
-  } else {
+  }
+
+  if (!isTest || !isProd) {
     config.devtool = 'eval-source-map';
   }
 
@@ -116,7 +122,7 @@ module.exports = (function makeWebpackConfig () {
        * Reference: https://github.com/webpack/style-loader
        * Use style-loader in development.
        */
-      loader: ENV === 'test' ? 'null' : ExtractTextPlugin.extract('style', 'css?sourceMap!postcss')
+      loader: isTest ? 'null' : ExtractTextPlugin.extract('style', 'css?sourceMap!postcss')
     }, {
 
       /**
@@ -156,7 +162,7 @@ module.exports = (function makeWebpackConfig () {
    * Instrument JS files with Isparta for subsequent code coverage reporting
    * Skips node_modules and files that end with .spec.js and .e2e.js
    */
-  if (ENV === 'test') {
+  if (isTest) {
     config.module.preLoaders.push({
       test: /\.js$/,
       exclude: [
@@ -196,7 +202,7 @@ module.exports = (function makeWebpackConfig () {
   config.plugins = [];
 
   /** Skip rendering index.html in test mode */
-  if (ENV !== 'test') {
+  if (!isTest) {
 
     /**
      * Reference: https://github.com/ampedandwired/html-webpack-plugin
@@ -213,12 +219,12 @@ module.exports = (function makeWebpackConfig () {
        * Extract css files
        * Disabled when in test mode or not in build mode
        */
-      new ExtractTextPlugin('[name].[hash].css', {disable: ENV !== 'build'})
+      new ExtractTextPlugin('[name].[hash].css', {disable: !isProd})
     );
   }
 
   /** Add build specific plugins */
-  if (ENV === 'build') {
+  if (isProd) {
     config.plugins.push(
 
       /**

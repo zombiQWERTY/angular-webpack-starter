@@ -19,6 +19,16 @@ import './stylesheets/reset.scss';
 import './stylesheets/fonts.scss';
 import './stylesheets/globals.scss';
 
+/* Header
+ * ===================================== */
+
+import './subModules/Header/header.scss';
+
+/* Footer
+ * ===================================== */
+
+import './subModules/Footer/footer.scss';
+
 /* Layout
  * ===================================== */
 
