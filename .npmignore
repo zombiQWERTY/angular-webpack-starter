@@ -1,6 +1,7 @@
 node_modules
 public
 build
+coverage
 
 .tmp
 .sass-cache

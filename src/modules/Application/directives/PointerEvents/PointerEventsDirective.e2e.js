@@ -1,6 +1,6 @@
 describe('PointerEvents', () => {
   beforeEach(() => {
-    browser.get('/home');
+    browser.get('/');
   });
 
   it('should have no-hover class while scrolling', () => {

@@ -1,5 +1,5 @@
 describe('ThirdParties', () => {
   beforeEach(() => {
-    browser.get('/home');
+    browser.get('/');
   });
 });

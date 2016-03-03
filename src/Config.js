@@ -1,9 +1,3 @@
-/* Copyright (C) Simply.info
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * Proprietary and confidential
- * Written by Pavel Zinovev <zombiqwerty@yandex.ru>, March 2016
- */
-
 /**
  * @module Config
  * @see Application

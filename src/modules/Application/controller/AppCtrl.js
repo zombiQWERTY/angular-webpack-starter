@@ -1,6 +1,6 @@
 /**
  * @module Root controller
- * @class SimplyController
+ * @class AppController
  */
 export default class AppController {  /*@ngInject*/
   /**

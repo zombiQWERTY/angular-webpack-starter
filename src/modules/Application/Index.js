@@ -40,7 +40,7 @@ import './stylesheets/layout.scss';
  * Define app module.
  * @param {String} moduleName.
  * @param {Array} dependencies.
- * @export Module name - name of root module of Simply app
+ * @export Module name - name of root module
  */
 export default angular.module('Workflow.App', [
   PointerEvents, ThirdParties

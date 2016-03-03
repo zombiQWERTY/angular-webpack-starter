@@ -1,9 +1,3 @@
-/* Copyright (C) Simply.info
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * Proprietary and confidential
- * Written by Pavel Zinovev <zombiqwerty@yandex.ru>, March 2016
- */
-
 /*
  * Javascripts
  * ========================================================================== */
@@ -19,6 +13,6 @@ import Home    from '../Home/Index';
  * @param {Array} dependencies.
  * @export Controllers module
  */
-export default angular.module('Simply.App.controllers', [
+export default angular.module('Workflow.App.controllers', [
   Layout, Home
 ]).name;

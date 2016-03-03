@@ -30,6 +30,6 @@ const PointerEvents = $timeout => {  /*@ngInject*/
  * Define PointerEvents module.
  * @param {String} moduleName.
  * @param {Array} dependencies.
- * @export Module name - name of this module of Simply app
+ * @export Module name - name of this module
  */
 export default angular.module('Workflow.App.PointerEvents', []).directive('pointerEvents', PointerEvents).name;
