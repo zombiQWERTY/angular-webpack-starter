@@ -1,6 +1,6 @@
 {
   "name": "angular-webpack-starter-kit",
-  "version": "5.1.3",
+  "version": "5.2.0",
   "description": "An Angular Webpack Starter kit featuring Angular 1.x (ui-router, Tests, E2E, Dev/Prod), Karma, Protractor, Jasmine, Istanbul, Babel, Postcss, Jade, livereload and Webpack",
   "keywords": [
     "angular",
@@ -20,7 +20,7 @@
     "starter kit"
   ],
   "scripts": {
-    "build": "rimraf dist && webpack --bail --progress --profile && cp -r ./src/content/ ./dist/",
+    "build": "rimraf dist && webpack --bail --progress --profile",
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
@@ -74,6 +74,7 @@
     "node-libs-browser": "^1.0.0",
     "null-loader": "^0.1.1",
     "postcss-discard-comments": "^2.0.4",
+    "postcss-functions": "^2.1.0",
     "postcss-hexrgba": "^0.2.0",
     "postcss-import": "^8.0.2",
     "postcss-inline-comment": "^2.0.0",

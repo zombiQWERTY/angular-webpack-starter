@@ -1,11 +1,11 @@
 import angular   from 'angular';
-import FastClick from 'Fastclick';
+import FastClick from 'fastclick';
 
 /**
  * Enable all third-party scripts
  * @module ThirdParties
  */
-const ThirdParties = () => {  /*@ngInject*/
+const ThirdParties = () => {
   return {
     restrict: 'A',
     link() {
@@ -18,6 +18,6 @@ const ThirdParties = () => {  /*@ngInject*/
  * Define ThirdParties module.
  * @param {String} moduleName.
  * @param {Array} dependencies.
- * @export Module name - name of this module
+ * @export Module name - name of this module.
  */
-export default angular.module('Workflow.App.ThirdParties', []).directive('thirdParties', ThirdParties).name;
+export default angular.module('Starter.App.ThirdParties', []).directive('thirdParties', ThirdParties).name;

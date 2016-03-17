@@ -4,12 +4,12 @@ import uiRouterStateHelper from 'angular-ui-router.statehelper';
 
 import Config              from './Config';
 import Runners             from './Runners';
-import AppView             from './modules/Application/views/layout.jade';
+import AppView             from './modules/Starter/views/layout.jade';
 
-import Controllers         from './modules/Application/Controllers';
+import Controllers         from './modules/Starter/Controllers';
 
 
-const appname = 'Workflow';  /** App and root module name */
+const appname = 'Starter';  /** App and root module name */
 const deps    = [uiRouter, 'ui.router.stateHelper'];  /** All global dependencies */
 const modules = [Controllers];  /** All app dependencies */
 

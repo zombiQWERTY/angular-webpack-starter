@@ -1,13 +1,12 @@
 import ThirdParties from './ThirdPartiesDirective';
 
 describe('Directive: ThirdParties', () => {
-  let $compile, $rootScope;
+  let $compile;
 
   beforeEach(angular.mock.module(ThirdParties));
 
-  beforeEach(inject((_$compile_, _$rootScope_) => {
-    $compile   = _$compile_;
-    $rootScope = _$rootScope_;
+  beforeEach(inject((_$compile_) => {
+    $compile = _$compile_;
   }));
 
   it('should be defined', () => {

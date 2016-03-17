@@ -4,7 +4,7 @@ describe('Application', () => {
   });
 
   it('should have a title', () => {
-    expect(browser.getTitle()).toEqual('Title');
+    expect(browser.getTitle()).toEqual('Home –– Angular Webpack Starter Kit');
   });
 
   it('should have #app-container', () => {

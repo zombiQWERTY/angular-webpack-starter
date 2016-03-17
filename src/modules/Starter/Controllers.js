@@ -13,6 +13,6 @@ import Home    from '../Home/Index';
  * @param {Array} dependencies.
  * @export Controllers module
  */
-export default angular.module('Workflow.App.controllers', [
+export default angular.module('Starter.App.controllers', [
   Layout, Home
 ]).name;

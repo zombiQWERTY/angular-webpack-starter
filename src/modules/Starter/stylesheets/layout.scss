@@ -10,12 +10,8 @@ a {
   }
 }
 
-html, body {
-  height: 100%;
-}
-
-.app-container, .wrapper {
-  min-height: 100%;
+html, body, .wrapper {
+  min-height: 100vh;
 }
 
 body {
@@ -32,6 +28,5 @@ body {
 .wrapper {
   width: $max-content-width;
   min-width: $min-content-width;
-  height: 100%;
   margin: 0 auto;
 }

@@ -1,7 +1,9 @@
 section.wrapper(
-  ng-controller="AppController"
+  ng-controller="StarterController as Starter"
   pointer-events=""
-  third-parties="")
+  third-parties=""
+  ng-class="noHover"
+)
 
   include ../subModules/Header/header.jade
   main.main(ui-view="")

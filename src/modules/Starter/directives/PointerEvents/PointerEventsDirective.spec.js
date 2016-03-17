@@ -1,13 +1,12 @@
 import PointerEvents from './PointerEventsDirective';
 
 describe('Directive: PointerEvents', () => {
-  let $compile, $rootScope;
+  let $compile;
 
   beforeEach(angular.mock.module(PointerEvents));
 
-  beforeEach(inject((_$compile_, _$rootScope_) => {
-    $compile   = _$compile_;
-    $rootScope = _$rootScope_;
+  beforeEach(inject((_$compile_) => {
+    $compile = _$compile_;
   }));
 
   it('should be defined', () => {

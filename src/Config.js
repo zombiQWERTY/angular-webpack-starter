@@ -7,7 +7,7 @@
  * @param {Object} $logProvider - Configures how the application logs messages.
  */
 const Config = (stateHelperProvider, $urlRouterProvider, $locationProvider, $logProvider) => {
-  /*@ngInject*/
+  "ngInject";
 
   $logProvider.debugEnabled(true);  /** Turn debug mode on/off */
   $locationProvider.html5Mode(true);  /** Turn html5 mode on */
@@ -20,14 +20,17 @@ const Config = (stateHelperProvider, $urlRouterProvider, $locationProvider, $log
    */
   $urlRouterProvider.rule(($injector, $location) => {
     const path = $location.path();
-    $location.path(path[path.length - 1] === '/' ? path.slice(0, -1) : path); /** If route like as /home/ then /home */
+    /** If route like as /home/ then /home */
+    $location.path(path[path.length - 1] === '/' ? path.slice(0, -1) : path).replace();
   });
+
 
   stateHelperProvider /** Describe our states */
     .state({
       url: '/',
       name: 'home',
       controller: 'HomeController',
+      controllerAs: 'Home',
       template: require('./modules/Home/views/home.jade')()
     });
 };

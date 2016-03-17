@@ -1,5 +1,8 @@
-/* @mixin clearfix {} */
 @define-mixin clearfix {
+  /**
+  * @exapmple:
+  *   @mixin clearfix;
+  */
   &::before, &::after {
     content: " ";
     display: table;
@@ -7,5 +10,72 @@
 
   &::after {
     clear: both;
+  }
+}
+
+@define-mixin setFont $fontName, $fontPathName, $types {
+  /**
+  * @Folder structure:
+  *   fonts/
+  *     PTSans/
+  *       Regular/
+  *         PTSans.eot
+  *         PTSans.woff
+  *         PTSans.ttf
+  *
+  * @example:
+  *   $fontName: PT Sans;
+  *   $fontPathName: PTSans;
+  *   $types: Regular, Bold;
+  *   @mixin setFont $fontName, $fontPathName, $types;
+  */
+  @each $type in $types {
+    @font-face {
+      font-family: $fontName;
+      src: url("./fonts/$fontPathName/$type/$fontPathName.eot");
+      src: url("./fonts/$fontPathName/$type/$fontPathName.eot?#iefix") format("embedded-opentype"),
+      url("./fonts/$fontPathName/$type/$fontPathName.woff") format("woff"),
+      url("./fonts/$fontPathName/$type/$fontPathName.ttf") format("truetype");
+
+      @if $type == Regular {
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      @if $type == RegularItalic {
+        font-style: italic;
+        font-weight: 400;
+      }
+
+      @if $type == Light {
+        font-style: normal;
+        font-weight: 100;
+      }
+
+      @if $type == LightItalic {
+        font-style: italic;
+        font-weight: 100;
+      }
+
+      @if $type == Medium {
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      @if $type == MediumItalic {
+        font-style: italic;
+        font-weight: 600;
+      }
+
+      @if $type == Bold {
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      @if $type == BoldItalic {
+        font-style: italic;
+        font-weight: 700;
+      }
+    }
   }
 }

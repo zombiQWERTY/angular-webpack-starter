@@ -5,7 +5,8 @@
  * @param {Object} $rootScope - Global application model.
  * @param {Object} $state - Provides interfaces to current state.
  */
-const Runners = ($rootScope, $state) => {  /*@ngInject*/
+const Runners = ($rootScope, $state) => {
+  "ngInject";
 
   /**
    * Waiting route change start event.

@@ -12,6 +12,9 @@ var ENV = process.env.npm_lifecycle_event;
 var isTest = ENV === 'test' || ENV === 'test-watch';
 var isProd = ENV === 'build';
 
+/** Root module of our app */
+var rootModule = 'Starter';
+
 module.exports = (function makeWebpackConfig () {
   /**
    * Port
@@ -186,6 +189,9 @@ module.exports = (function makeWebpackConfig () {
       require('postcss-hexrgba'),
       require('postcss-size'),
       require('precss')(),
+      require('postcss-functions')({
+        functions: {}
+      }),
       require('css-mqpacker')(),
       require('postcss-discard-comments/dist/index')(),
       require('autoprefixer')({
@@ -210,7 +216,7 @@ module.exports = (function makeWebpackConfig () {
      */
     config.plugins.push(
       new HtmlWebpackPlugin({
-        template: './src/modules/Application/views/layout.html',
+        template: './src/modules/' + rootModule + '/views/layout.html',
         inject: 'body'
       }),
 

@@ -2,11 +2,13 @@
  * Javascripts
  * ========================================================================== */
 
-import angular       from 'angular';
-import AppController from './controller/AppCtrl';
+import angular           from 'angular';
+import StarterController from './controller/StarterCtrl';
 
-import PointerEvents from './directives/PointerEvents/PointerEventsDirective';
-import ThirdParties  from './directives/ThirdParties/ThirdPartiesDirective';
+import PointerEvents     from './directives/PointerEvents/PointerEventsDirective';
+import ThirdParties      from './directives/ThirdParties/ThirdPartiesDirective';
+
+import TitleService      from './services/TitleService/TitleService';
 
 /*
  * Stylesheets
@@ -42,6 +44,6 @@ import './stylesheets/layout.scss';
  * @param {Array} dependencies.
  * @export Module name - name of root module
  */
-export default angular.module('Workflow.App', [
-  PointerEvents, ThirdParties
-]).controller('AppController', AppController).name;
+export default angular.module('Starter.App', [
+  PointerEvents, ThirdParties, TitleService
+]).controller('StarterController', StarterController).name;
