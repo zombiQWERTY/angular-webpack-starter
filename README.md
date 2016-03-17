@@ -104,7 +104,7 @@ It will start a local server using `webpack-dev-server` which will watch, build 
 ## Other
 
 * `npm stats` for code analysing ([webpack.github.io/analyse](https://webpack.github.io/analyse/))
-* Store your content (images, etc.) that loads from html/jade in [pulic folder](./src/pulic/) folder
+* Store your content (images, etc.) that loads from html/jade in [public folder](./src/public/) folder
 
 # License
 
