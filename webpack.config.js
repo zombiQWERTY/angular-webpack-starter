@@ -75,15 +75,14 @@ module.exports = (function makeWebpackConfig () {
   if (isTest) {
     config.devtool = 'inline-source-map';
   }
-
   if (isProd) {
     config.devtool = 'source-map';
   }
 
-  if (!isTest || !isProd) {
+  if (!isTest && !isProd) {
     config.devtool = 'eval-source-map';
   }
-
+  
   /**
    * Loaders
    * Reference: http://webpack.github.io/docs/configuration.html#module-loaders
@@ -260,7 +259,6 @@ module.exports = (function makeWebpackConfig () {
       }])
     );
   }
-
   /**
    * Dev server configuration
    * Reference: http://webpack.github.io/docs/configuration.html#devserver
