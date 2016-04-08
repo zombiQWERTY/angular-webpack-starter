@@ -18,7 +18,7 @@ This workflow serves as a starting point for building Angular 1.x applications u
 
 >Warning: Make sure you're using the latest version of Node.js and NPM
 
-### Quick start
+### Installing
 
 > Clone/Download the repo then edit `Application.js` inside [`/src/Application.js`](/src/Application.js)
 
@@ -32,6 +32,9 @@ $ cd my-app
 # install the dependencies with npm
 $ npm install
 
+# install selenium-webdriver (for e2e testing)
+$ npm run selenium-install
+
 # start the server
 $ npm start
 ```
@@ -41,8 +44,8 @@ go to [http://localhost:8080](http://localhost:8080) in your browser.
 # Table of Contents
 
 * [Getting Started](#getting-started)
-    * [Dependencies](#dependencies)
     * [Installing](#installing)
+    * [Dependencies](#dependencies)
     * [Running the app](#running-the-app)
     * [Developing](#developing)
     * [Testing](#testing)
@@ -56,22 +59,6 @@ go to [http://localhost:8080](http://localhost:8080) in your browser.
 What you need to run this app:
 * `node` and `npm` (Use [NVM](https://github.com/creationix/nvm))
 * Ensure you're running Node (`v4.1.x`+) and NPM (`2.14.x`+)
-
-## Installing
-
-Either
-* `fork` this repo
-* `clone` your fork
-
-Or just
-* `npm install angular-webpack-starter-kit` for completely installation
-
-And then
-* `npm install` to install all dependencies
-
-For End to End live testing:
-* `npm install selenium-standalone@latest -g`
-* `selenium-standalone install`
 
 ## Running the app
 
@@ -92,18 +79,18 @@ It will start a local server using `webpack-dev-server` which will watch, build 
 
 #### 1. Unit Tests
 
-* single run: `npm test`
+* single run: `npm run test`
 * live mode (TDD style): `npm run test-watch`
 
 
 #### 2. End to End Tests
-
-* single run: `npm e2e`
+* run `npm run selenium-start` and then:
+* single run: `npm run e2e` or
 * live mode (TDD style): `npm run e2e-watch`
 
 ## Other
 
-* `npm stats` for code analysing ([webpack.github.io/analyse](https://webpack.github.io/analyse/))
+* `npm run stats` for code analysing ([webpack.github.io/analyse](https://webpack.github.io/analyse/))
 * Store your content (images, etc.) that loads from html/jade in [public folder](./src/public/) folder
 
 # License

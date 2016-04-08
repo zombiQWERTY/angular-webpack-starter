@@ -1,3 +1,7 @@
+var chromedriver = require('chromedriver');
+
+if (!chromedriver.path) { throw 'error: chomedriver is not installed'; }
+
 exports.config = {
   baseUrl: 'http://localhost:8080/',
 
@@ -23,7 +27,7 @@ exports.config = {
   capabilities: {
     'browserName': 'chrome',
     'chromeOptions': {
-      'args': ['show-fps-counter=true']
+      'args': ['show-fps-counter=true', '--disable-extensions']
     }
   },
 
@@ -31,7 +35,7 @@ exports.config = {
     browser.ignoreSynchronization = true;
   },
 
-  chromeDriver: '/usr/local/lib/node_modules/selenium-standalone/.selenium/chromedriver/2.21-x64-chromedriver',
+  chromeDriver: chromedriver.path,
 
-  seleniumServerJar: './node_modules/protractor/selenium/selenium-server-standalone-2.48.2.jar'
+  seleniumServerJar: './node_modules/selenium-standalone/.selenium/selenium-server/2.53.0-server.jar'
 };
