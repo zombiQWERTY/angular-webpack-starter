@@ -24,11 +24,11 @@
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
-    "e2e": "node ./node_modules/.bin/protractor",
-    "e2e-watch": "./node_modules/.bin/protractor --elementExplorer",
+    "e2e": "node node_modules/.bin/protractor",
+    "e2e-watch": "node_modules/.bin/protractor --elementExplorer",
     "start": "npm run server",
     "stats": "webpack --json --profile > stats.json",
-    "selenium-install": "node ./seleniumInstall.js",
+    "selenium-install": "node seleniumInstall.js",
     "selenium-start": "selenium-standalone start"
   },
   "repository": {
