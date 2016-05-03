@@ -7,7 +7,7 @@ import angular from 'angular';
  * @param {Object} $timeout - Timeout provider.
  */
 const PointerEvents = $timeout => {
-  "ngInject";
+  'ngInject';
 
   return {
     restrict: 'A',

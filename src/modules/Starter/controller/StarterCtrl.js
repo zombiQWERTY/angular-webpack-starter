@@ -7,7 +7,7 @@ export default class StarterController {
    * @constructor Bootstrap app.
    */
   constructor() {
-    "ngInject";
+    'ngInject';
 
   }
 }

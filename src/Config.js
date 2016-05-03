@@ -7,7 +7,7 @@
  * @param {Object} $logProvider - Configures how the application logs messages.
  */
 const Config = (stateHelperProvider, $urlRouterProvider, $locationProvider, $logProvider) => {
-  "ngInject";
+  'ngInject';
 
   $logProvider.debugEnabled(true);  /** Turn debug mode on/off */
   $locationProvider.html5Mode(true);  /** Turn html5 mode on */

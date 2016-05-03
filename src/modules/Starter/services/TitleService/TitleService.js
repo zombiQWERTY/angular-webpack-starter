@@ -10,7 +10,7 @@ import angular from 'angular';
  * @constructor
  */
 const Service = () => {
-  "ngInject";
+  'ngInject';
 
   class TitleService {
     static setTitle(params = {}) {

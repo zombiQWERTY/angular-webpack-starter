@@ -8,7 +8,7 @@ export default class HomeController {
    * @param {object} TitleService - Controlling our title.
    */
   constructor(TitleService) {
-    "ngInject";
+    'ngInject';
 
     TitleService.setTitle({
       newTitle: 'Home'

@@ -1,3 +1,4 @@
+# PACKAGE IS DEPRECATED. USE [COMPONENT-WAY-STARTER-KIT](https://github.com/zombiQWERTY/angular-component-way-webpack-starter-kit)
 # An Angular Webpack Starter kit
 
 [![Dependency Status](https://david-dm.org/zombiQWERTY/angular-webpack-starter/status.svg)](https://david-dm.org/zombiQWERTY/angular-webpack-starter#info=dependencies) [![devDependency Status](https://david-dm.org/zombiQWERTY/angular-webpack-starter/dev-status.svg)](https://david-dm.org/zombiQWERTY/angular-webpack-starter#info=devDependencies)
@@ -91,7 +92,7 @@ It will start a local server using `webpack-dev-server` which will watch, build 
 ## Other
 
 * `npm run stats` for code analysing ([webpack.github.io/analyse](https://webpack.github.io/analyse/))
-* Store your content (images, etc.) that loads from html/jade in [public folder](./src/public/) folder
+* Store your assets (images, etc.) that loads from html/jade in [assets folder](./src/assets/) folder
 
 # License
 
